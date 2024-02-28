@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 1200vh;
+}
+
+.header {
+  display: flex;
+  vertical-align: middle;
+}
+.header .container-header {
+  position: fixed;
+  width: 100%;
+}
+.header .container-header .logo-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  margin-left: 8em;
+  padding-top: 2.5rem;
+}
+.header .container-header .logo-header h1 {
+  text-transform: uppercase;
+  color: #eee;
+  font-size: 2.4em;
+  letter-spacing: 2px;
+}
+.header .container-header .logo-header h1 i {
+  margin: 0 0 0 0.35rem;
+  color: #9b9165;
+  font-size: 1.1em;
+}
+.header .container-header .logo-header h1 span {
+  border: 1px solid #9b9165;
+  height: 24px;
+  width: 22px;
+  box-shadow: 2px 2px 2px 0.1px rgba(155, 145, 101, 0.3);
+}
+.header .container-header .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #333;
+  height: 8rem;
+}
+.header .container-header .main-nav ul {
+  margin-right: 16rem;
+}
+.header .container-header .main-nav ul li {
+  display: inline-block;
+  padding: 0 2.5rem;
+}
+.header .container-header .main-nav ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.8em;
+  letter-spacing: 0.1px;
+}
+.header .container-header .burger-btn {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  right: 2.5%;
+  padding: 2.2rem;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.header .container-header .burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.header .container-header .burger-btn:hover .burger-btn__bars::after,
+.header .container-header .burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+.header .container-header .burger-btn__box {
+  position: relative;
+  width: 3.6rem;
+  height: 2rem;
+}
+.header .container-header .burger-btn__bars, .header .container-header .burger-btn__bars::before, .header .container-header .burger-btn__bars::after {
+  position: absolute;
+  right: 0;
+  height: 0.3rem;
+  content: "";
+  background-color: #ddd;
+  transition: width 0.3s;
+}
+.header .container-header .burger-btn__bars {
+  width: 100%;
+}
+.header .container-header .burger-btn__bars::after {
+  top: 1.3rem;
+  width: 60%;
+}
+.header .container-header .burger-btn__bars::before {
+  top: 2.7rem;
+  width: 30%;
+  transition-delay: 0.1s;
+}/*# sourceMappingURL=main.css.map */

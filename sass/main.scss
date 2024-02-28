@@ -1,0 +1,145 @@
+@use "./colors" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%; //10px
+	scroll-behavior: smooth;
+}
+
+body {
+	//font-family: "Montserrat", sans-serif;
+	font-family: "Roboto", sans-serif;
+	height: 1200vh;
+}
+
+.header {
+	display: flex;
+	vertical-align: middle;
+	.container-header {
+		position: fixed;
+		width: 100%;
+		.logo-header {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			position: absolute;
+			margin-left: 8em;
+			padding-top: 2.5rem;
+
+			h1 {
+				text-transform: uppercase;
+				color: #eee;
+				font-size: 2.4em;
+				letter-spacing: 2px;
+
+				// i {
+				// 	font-size: 1.5rem;
+				// }
+
+				i {
+					margin: 0 0 0 0.35rem;
+					color: $darkgold;
+					font-size: 1.1em;
+				}
+
+				span {
+					border: 1px solid $darkgold;
+					height: 24px;
+					width: 22px;
+					box-shadow: 2px 2px 2px 0.1px rgba($darkgold, $alpha: 0.3);
+				}
+			}
+		}
+
+		.main-nav {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+			background-color: #333;
+			height: 8rem;
+			ul {
+				margin-right: 16rem;
+				li {
+					display: inline-block;
+					padding: 0 2.5rem;
+
+					a {
+						color: rgba($white, $alpha: 0.7);
+						text-transform: uppercase;
+						text-decoration: none;
+						font-size: 1.8em;
+						// padding: 0 1rem;
+						letter-spacing: 0.1px;
+					}
+				}
+			}
+		}
+
+		.burger-btn {
+			position: fixed;
+			display: flex;
+			justify-content: flex-end;
+			top: 0;
+			right: 2.5%;
+
+			padding: 2.2rem;
+			background: none;
+			border: 1px solid transparent;
+			cursor: pointer;
+			z-index: 1000;
+
+			&:focus {
+				outline: none;
+				border: 1px solid rgba(255, 255, 255, 0.5);
+				border-radius: 5px;
+			}
+
+			&:hover {
+				.burger-btn__bars::after,
+				.burger-btn__bars::before {
+					width: 100%;
+				}
+			}
+
+			&__box {
+				position: relative;
+				width: 3.6rem;
+				height: 2rem;
+			}
+
+			&__bars,
+			&__bars::before,
+			&__bars::after {
+				position: absolute;
+				right: 0;
+				height: 0.3rem;
+				content: "";
+				background-color: #ddd;
+				transition: width 0.3s;
+			}
+
+			&__bars {
+				width: 100%;
+
+				&::after {
+					top: 1.3rem;
+					width: 60%;
+				}
+				&::before {
+					top: 2.7rem;
+					width: 30%;
+					transition-delay: 0.1s;
+				}
+			}
+		}
+	}
+}
