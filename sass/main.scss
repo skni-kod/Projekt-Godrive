@@ -16,7 +16,8 @@ html {
 body {
 	//font-family: "Montserrat", sans-serif;
 	font-family: "Roboto", sans-serif;
-	height: 1200vh;
+	height: 100vh;
+	background-color: $darkgold;
 }
 
 .header {
@@ -32,30 +33,20 @@ body {
 			align-items: center;
 			position: absolute;
 			margin-left: 8em;
-			padding-top: 2.5rem;
-
+			padding: 10rem;
+			
 			h1 {
+				top: 15rem;
+				left: 15rem;
+				padding: 1.5rem ;
 				text-transform: uppercase;
-				color: #eee;
-				font-size: 2.4em;
-				letter-spacing: 2px;
+				color: $darkgold;
+				font-size: 7em;
+				letter-spacing: 7px;
+				font-family: 'Roboto', serif;
+				text-shadow: 9px -1px 9px $darker;
 
-				// i {
-				// 	font-size: 1.5rem;
-				// }
-
-				i {
-					margin: 0 0 0 0.35rem;
-					color: $darkgold;
-					font-size: 1.1em;
-				}
-
-				span {
-					border: 1px solid $darkgold;
-					height: 24px;
-					width: 22px;
-					box-shadow: 2px 2px 2px 0.1px rgba($darkgold, $alpha: 0.3);
-				}
+				
 			}
 		}
 
@@ -64,7 +55,6 @@ body {
 			flex-direction: row;
 			justify-content: flex-end;
 			align-items: center;
-			background-color: #333;
 			height: 8rem;
 			ul {
 				margin-right: 16rem;
@@ -73,7 +63,7 @@ body {
 					padding: 0 2.5rem;
 
 					a {
-						color: rgba($white, $alpha: 0.7);
+						color: rgba($gold, $alpha: 0.7);
 						text-transform: uppercase;
 						text-decoration: none;
 						font-size: 1.8em;
@@ -123,7 +113,7 @@ body {
 				right: 0;
 				height: 0.3rem;
 				content: "";
-				background-color: #ddd;
+				background-color: $gold;
 				transition: width 0.3s;
 			}
 
@@ -140,6 +130,87 @@ body {
 					transition-delay: 0.1s;
 				}
 			}
+		}
+	}
+}
+
+//MAIN
+
+.container-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+
+	background-image: linear-gradient(
+		to left,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0.8),
+		rgba(0, 0, 0, 0.4)
+	);
+
+	.main-img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		background-color: transparent;
+		background-image: url("/img/Audi-R8-GT-67.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+
+	.main-text {
+		color: $white;
+		.main-title {
+			position: absolute;
+			top: 25rem;
+			right: 50rem;
+			font-size: 8.5rem;
+			color: $gold;
+			text-shadow: 6px -1px 6px $darkgold;
+		}
+
+		.helps-you {
+			position: absolute;
+			top: 35rem;
+			right: 59.5rem;
+			margin-top: 1rem;
+			text-transform: uppercase;
+			font-size: 2.2rem;
+			color: $white;
+			letter-spacing: 1px;
+
+			&__line {
+				position: absolute;
+				top: 38rem;
+				right: 50.5rem;
+				width: 9rem;
+				height: 0.1rem;
+				border: none;
+				border-bottom: 2px solid $white;
+			}
+		}
+
+		h3 {
+			position: absolute;
+			top: 50rem;
+			right: 60rem;
+			color: $gold;
+			font-size: 2.6rem;
+			// font-weight: 300;
+		}
+		p {
+			position: absolute;
+			top: 55rem;
+			right: 24rem;
+			padding: 0.6rem;
+			font-size: 1.8rem;
+			width: 750px;
 		}
 	}
 }
