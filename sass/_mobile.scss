@@ -1,0 +1,23 @@
+@media (min-width: 580px) {
+	body {
+		background-color: red;
+	}
+	.header {
+		.container-header {
+			// display: none;
+			.main-nav {
+				&__mobile {
+					background-color: red;
+					// display: none;
+				}
+
+				&__desktop {
+					display: none;
+				}
+			}
+			.burger-btn {
+				display: none;
+			}
+		}
+	}
+}
