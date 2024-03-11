@@ -1,5 +1,6 @@
 @import "./mobile";
 @import "./colors";
+@import "./animations";
 
 *,
 *::before,
@@ -69,7 +70,7 @@ body {
 		position: fixed;
 		width: 100%;
 		.logo-header {
-			display: flex;
+			display: none;
 			flex-direction: row;
 			justify-content: flex-start;
 			align-items: center;
@@ -178,11 +179,11 @@ body {
 //MAIN
 
 .container-main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: absolute;
+	// justify-content: center;
+	// align-items: center;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 
 	background-image: linear-gradient(
@@ -196,13 +197,11 @@ body {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		margin: 0;
 		background-color: transparent;
 		background-image: url("/img/Audi-R8-GT-67.jpg");
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		// filter: sepia();
 		z-index: -1;
 	}
 
@@ -210,28 +209,31 @@ body {
 		color: $white;
 		.main-title {
 			position: absolute;
-			top: 25rem;
-			right: 50rem;
-			font-size: 8.5rem;
+			top: 11rem;
+			left: 3.5rem;
+			font-size: 4em;
+			// right: 50rem;
+			// font-size: 8.5rem;
 			color: $gold;
 			text-shadow: 6px -1px 6px $darkgold;
 		}
 
 		.helps-you {
 			position: absolute;
-			top: 35rem;
-			right: 59.5rem;
-			margin-top: 1rem;
+			top: 15rem;
+			left: 6.5rem;
+			margin-top: 1em;
 			text-transform: uppercase;
-			font-size: 2.2rem;
+			font-size: 1.8rem;
 			color: $white;
 			letter-spacing: 1px;
+			font-family: "Montserrat", sans-serif;
 
 			&__line {
 				position: absolute;
-				top: 38rem;
-				right: 50.5rem;
-				width: 9rem;
+				top: 18.3rem;
+				left: 18rem;
+				width: 4rem;
 				height: 0.1rem;
 				border: none;
 				border-bottom: 2px solid $white;
@@ -240,19 +242,53 @@ body {
 
 		h3 {
 			position: absolute;
-			top: 50rem;
-			right: 60rem;
+			top: 30.5rem;
+			left: 8rem;
+			margin-right: 1.3rem;
+			width: 70%;
 			color: $gold;
-			font-size: 2.6rem;
-			// font-weight: 300;
+			font-size: 2em;
+			text-align: end;
+			font-family: "Montserrat", sans-serif;
+
+			// font-weight: 400;
 		}
 		p {
 			position: absolute;
-			top: 55rem;
-			right: 24rem;
-			padding: 0.6rem;
-			font-size: 1.8rem;
-			width: 750px;
+			top: 39rem;
+			left: 1rem;
+			font-size: 1.5rem;
+			width: 35rem;
+			text-align: start;
+			color: rgba(255, 255, 255, 0.7);
+			font-family: "Montserrat", sans-serif;
+		}
+	}
+
+	.main-arrow {
+		display: block;
+		position: absolute;
+		bottom: 5.2em;
+		left: 50%;
+		padding: 2em;
+		transform: translateX(-50%);
+		border: 1px solid $gold; /* Assuming $gold is defined elsewhere in your code */
+		border-radius: 50%;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			border: 1px solid $gold; /* Assuming $gold is defined elsewhere in your code */
+			border-radius: 50%;
+			animation: pulse 2s infinite;
+		}
+
+		&__icon {
+			width: 22px;
 		}
 	}
 }
