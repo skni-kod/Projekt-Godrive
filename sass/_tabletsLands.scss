@@ -1,0 +1,48 @@
+@media (min-width: 769px) {
+	//MAIN
+	.container-main {
+		.main-text {
+			.main-title {
+				position: absolute;
+				font-size: 7em;
+			}
+			.helps-you {
+				position: absolute;
+				margin-top: 2em;
+				left: 12.5rem;
+				font-size: 3em;
+
+				&__line {
+					position: absolute;
+					top: 23.7rem;
+					left: 31.5rem;
+					width: 6rem;
+				}
+			}
+
+			h3 {
+				position: absolute;
+				top: 40rem;
+				left: 16rem;
+				font-size: 4.3em;
+				padding: 1em;
+				width: 80%;
+			}
+			p {
+				position: absolute;
+				top: 54rem;
+				margin-top: 1.5em;
+				font-size: 2.4em;
+			}
+		}
+
+		.main-arrow {
+			position: absolute;
+			bottom: 7.5em;
+
+			&__icon {
+				width: 30px;
+			}
+		}
+	}
+}

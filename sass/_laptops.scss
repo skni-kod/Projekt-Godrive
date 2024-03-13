@@ -1,0 +1,32 @@
+@media (min-width: 1024px) {
+	//HEADER
+
+	.header {
+		.container-header {
+			.main-nav {
+				&__desktop {
+					display: flex;
+					background-color: #fff;
+
+					ul {
+						margin-right: 5rem;
+						li {
+							padding: 1.4rem;
+							a {
+								// color: red;
+								// color: rgba($gold, $alpha: 0.7) !important;
+								// z-index: 1000000;
+								font-size: 1.8em;
+								// overflow: visible;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.burger-btn {
+			display: none;
+		}
+	}
+}

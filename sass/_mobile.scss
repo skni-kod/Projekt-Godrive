@@ -1,19 +1,14 @@
-@media (min-width: 580px) {
-	.header {
-		.container-header {
-			// display: none;
-			.main-nav {
-				&__mobile {
-					background-color: red;
-					// display: none;
-				}
+@media (min-width: 320px) {
+	.main-nav {
+		&__desktop {
+			display: none;
+		}
 
-				&__desktop {
+		.header {
+			.container-header {
+				.burger-btn {
 					display: none;
 				}
-			}
-			.burger-btn {
-				display: none;
 			}
 		}
 	}
